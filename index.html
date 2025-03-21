@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNIT JAIPUR CAR RENTAL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">MNIT JAIPUR CAR RENTAL</h1>
+    </header>
+
+    <div class="container">        
+        <div class="vehicle">
+            <img src="../bike.jpg" alt="Bike Image">
+            <h2>Motorbike</h2>
+            <p>Perfect for quick trips.</p>
+            <p class="price">₹99/hr</p>
+            <button class="btn" onclick="openPopup('Motorbike')">Book Now</button>
+        </div>
+
+        <div class="vehicle">
+            <img src="../car.jpg" alt="Car Image">
+            <h2>Sedan</h2>
+            <p>Comfortable for city rides.</p>
+            <p class="price">₹249/hr</p>
+            <button class="btn" onclick="openPopup('Sedan')">Book Now</button>
+        </div>
+
+        <div class="vehicle">
+            <img src="../jeep.jpg" alt="SUV Image">
+            <h2>SUV</h2>
+            <p>Spacious and great for family travel.</p>
+            <p class="price">₹399/hr</p>
+            <button class="btn" onclick="openPopup('SUV')">Book Now</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+    <div class="popup" id="popup">
+        <h2 id="popup-title">Book Vehicle</h2>
+        <form id="booking-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="college-id">College ID:</label>
+                <input type="text" id="college-id" name="college-id" required>
+            </div>
+            <div class="form-group">
+                <label for="rent-date">Rent Date:</label>
+                <input type="date" id="rent-date" name="rent-date" required>
+            </div>
+            <div class="form-group">
+                <label for="duration">Time Duration (hours):</label>
+                <input type="number" id="duration" name="duration" min="1" required>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+
+    <footer>
+        <div>
+            <h3>Customer Support</h3>
+            <p>If you need assistance, feel free to contact us:</p>
+            <ul class="footer-links">
+                <li><a href="tel:+1234567890">Call Us: +1234567890</a></li>
+                <li><a href="mailto:support@rentvehicle.com">Email: support@rentvehicle.com</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Other Features</h3>
+            <ul class="footer-links">
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
